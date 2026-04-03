@@ -8,3 +8,10 @@ base64 = "0.22.1"
 hex = "0.4.3"
 regex = "1.12.3"
 zlib-rs = "0.6.3"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
