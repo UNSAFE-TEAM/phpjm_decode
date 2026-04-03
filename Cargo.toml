@@ -1,0 +1,10 @@
+[package]
+name = "phpjm_decode"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+base64 = "0.22.1"
+hex = "0.4.3"
+regex = "1.12.3"
+zlib-rs = "0.6.3"
