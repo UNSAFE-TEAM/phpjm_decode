@@ -78,7 +78,7 @@ fn parser_fragment_c(content: &[u8]) -> Option<String> {
 }
 
 fn splicing_data(fragment_c: &str, decoded_a: &str, fragment_b: &str) -> String {
-    let re = regex::Regex::new(r"22[a-f0-9]+?22").expect("splicing regex error");
+    let re = regex::Regex::new(r"222e24[a-f0-9]+2e22").expect("splicing regex error");
     let replacement = format!("{}{}", decoded_a, fragment_b);
 
     re.replace_all(fragment_c, replacement.as_str()).to_string()
